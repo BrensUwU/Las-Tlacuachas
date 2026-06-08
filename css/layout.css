@@ -150,16 +150,64 @@ nav a:hover {
     background-image: url('../assets/imagenes/peg_izq-removebg-preview.png');
 }
 
-/* Asignamos la imagen específica para el lado derecho */
+/* =========================================
+   DISEÑO PARA CELULARES (VERTICAL)
+   ========================================= */
+@media (max-width: 768px) {
+  
+  /* 1. Acomodar el Menú de Navegación de arriba */
+  header nav ul {
+    display: flex;
+    flex-direction: column; /* Apila los botones de navegación uno bajo otro */
+    gap: 15px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* 2. Acomodar la sección principal (El texto y el Tlacuache) */
+  .hero {
+    display: flex;
+    flex-direction: column; /* Pone el texto arriba y el dibujo abajo */
+    text-align: center; /* Centra todo el texto */
+    padding: 30px 15px; /* Da un poco de respiro a los lados */
+  }
+
+  /* 3. Achicar las letras gigantes para que no se salgan de la pantalla */
+  .hero h1 {
+    font-size: 2.5rem !important; /* Letra más chiquita para el nombre */
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  /* 4. Acomodar los botones de WhatsApp y Menú */
+  .botones-hero {
+    display: flex;
+    flex-direction: column; /* Apila los botones */
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .botones-hero a {
+    width: 90%; /* Los botones abarcan casi toda la pantalla */
+    text-align: center;
+  }
+
+  /* 5. Ajustar al Tlacuache para que no estorbe */
+  .hero img {
+    max-width: 80%; /* Hace la imagen un poco más chica */
+    height: auto;
+    margin: 30px auto 0 auto; /* Lo centra y le da espacio arriba */
+  }
+}/* Asignamos la imagen específica para el lado derecho */
 .patron-der {
     right: 0;
     background-image: url('../assets/imagenes/peg_der-removebg-preview.png');
 }
 
-/* Regla para celulares */
-@media (max-width: 768px) {
-  .tu-contenedor-principal {
-    display: flex;
-    flex-direction: column; /* Esto apila las cosas una debajo de la otra */
-  }
-}
+
