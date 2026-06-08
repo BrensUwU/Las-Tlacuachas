@@ -155,3 +155,11 @@ nav a:hover {
     right: 0;
     background-image: url('../assets/imagenes/peg_der-removebg-preview.png');
 }
+
+/* Regla para celulares */
+@media (max-width: 768px) {
+  .tu-contenedor-principal {
+    display: flex;
+    flex-direction: column; /* Esto apila las cosas una debajo de la otra */
+  }
+}
